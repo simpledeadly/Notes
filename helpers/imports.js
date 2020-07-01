@@ -1,0 +1,10 @@
+const body = find('body')
+const darkBtn = find('.dark-icon')
+const form = find('#form')
+const note = find('.note')
+const notes = find('.notes')
+const input = find('.input')
+
+const clearBtn = $('.clear')
+const noNotes = $('.no-notes')
+const img = $('.img')

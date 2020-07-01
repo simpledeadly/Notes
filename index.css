@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&family=Pacifico&display=swap');
+
+* {
+  transition: all 0.2s, opacity 0.02s;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #F6F8F9
+}
+
+hr {
+  border: none;
+  background: #eaeaeb;
+  height: 1px;
+}
+
+.container {
+  padding-top: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.navbar {
+  height: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 65px;
+  width: 100%
+}
+
+.icons {
+  display: flex
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  user-select: none;
+  background: linear-gradient(to left, #b24592 , #f15f79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: table
+}
+
+.icon {
+  color: #222;
+  user-select: none;
+  width: 23px;
+  height: 23px
+}
+
+.settings {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.dark-icon {
+  user-select: none;
+  width: 20px;
+  height: 23px;
+  margin-right: 30px;
+  cursor: pointer
+}
+
+.center {
+  display: flex;
+  justify-content: center
+}
+
+.input {
+  background: #fff;
+  color: #555;
+  caret-color: #f15f79;
+  border: none;
+  font-size: 18px;
+  padding: 20px 24px;
+  border-radius: 5px;
+  outline: none;
+  width: 470px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 76px;
+  animation: up-down 5s ease-in-out infinite;
+}
+
+.input:hover {
+  box-shadow: none
+}
+
+.input:focus {
+  box-shadow: none;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.input::placeholder {
+  color: #b5b4b9
+}
+
+.warn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.img {
+  font-size: 60px;
+  user-select: none;
+  color: #777;
+}
+
+.img--hide {
+  display: none;
+}
+
+.no-notes {
+  display: block;
+  user-select: none;
+  color: #777;
+}
+
+.no-notes--hide {
+  display: none;
+}
+
+.notes {
+  padding-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.note {
+  border-radius: 5px;
+  padding: 0 24px;
+  display: flex;
+  outline: none;
+  margin-right: 30px;
+  margin-bottom: 22px;
+  align-items: center;
+  justify-content: center;  
+  background: #fff;
+  transition: all 0.2s;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  color: #555;
+  font-size: 18px;
+  height: 50px;
+}
+
+.note:last-child {
+  margin-right: 0;
+}
+
+.note:hover {
+  box-shadow: none;
+}
+
+.note_input {
+  outline: none;
+  caret-color: #f15f79;
+}
+
+.clear {
+  display: none;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #b5b4b9;
+  user-select: none;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.clear--display {
+  display: flex;
+}
+
+#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f15f79;
+  animation: grader 1s linear infinite;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+}
+
+.loader span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: #fff;
+  animation: loader 1.5s linear infinite;
+}
+
+.loader span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader {
+  from {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes grader {
+  from {
+    background: #f15f79;
+  }
+  to {
+    background: #fff;
+  }
+}
+
+@keyframes dark-grader {
+  from {
+    background: #f15f79;
+  }
+  to {
+    background: #101111;
+  }
+}
+
+::selection {
+  background: #f15f79;
+  color: #fff
+}
+
+::-webkit-scrollbar {
+  width: 0
+}
+
+/*
+* =========================================================
+* Dark Mode
+* =========================================================
+*/
+
+.dark {
+  background: #101111;
+  color: #fff;
+}
+
+.dark .info {
+  filter: invert(85%);
+}
+
+.dark .icon {
+  color: #ccc;
+}
+
+.dark .input {
+  background: #0a0a0a;
+  color: #ccc;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .no-notes {
+  color: #444;
+}
+
+.dark .img {
+  color: #444;
+}
+
+.dark .input:hover {
+  box-shadow: none;
+}
+
+.dark .input:focus {
+  box-shadow: none;
+}
+
+.dark .input::placeholder {
+  color: #666;
+}
+
+.dark hr {
+  background: #181818;
+}
+
+.dark .illustration {
+  color: #444;
+}
+
+.dark .note {
+  background: #0a0a0a;
+  color: #bbb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .note:hover {
+  box-shadow: none;
+}
+
+.dark .clear {
+  color: #555;
+}
+
+.dark .note_input {
+  color: #bbb;
+}
+
+.dark #preloader {
+  animation: dark-grader 1s linear infinite;
+}
+
+/*
+* =============================================================
+* Adaptive
+* =============================================================
+*/
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .navbar {
+    max-width: 1200px;
+  }
+
+  .input {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 650px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-top: 20px;
+    max-width: 450px;
+  }
+
+  .input {
+    width: 400px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    max-width: 350px;
+  }
+
+  .no-notes {
+    font-size: 28px;
+  }
+
+  .input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .no-notes {
+    font-size: 25px;
+  }
+
+  .input {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+}

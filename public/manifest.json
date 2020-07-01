@@ -1,0 +1,32 @@
+{
+  "short_name": "notes",
+  "name": "notes",
+  "description" : "PWA on native JavaScript",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "index.html",
+  "theme_color": "transparent",
+  "background_color": "transparent",
+  "icons": [
+    {
+      "src": "img/icon-60.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-558.png",
+      "sizes": "558x558",
+      "type": "image/png"
+    }
+  ]
+}
