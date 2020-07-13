@@ -68,8 +68,6 @@ const middlewares = () => {
 	}
 }
 
-input.addEventListener('click', addNote)
-
 function addNote() {
 	middlewares()
 
