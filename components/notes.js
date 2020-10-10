@@ -73,7 +73,7 @@ const middlewares = () => {
 		case 'numFuncsList':
 			return (
 				input.value = '',
-				alert('1) 1 - switch theme to dark.\n2) 2 - clear all notes.')
+				alert('1) 1 - switch theme to dark.\n2) 3 - clear all notes.\n3) 2 - switch on Nord theme.')
 			)
 	}
 }
@@ -109,7 +109,7 @@ form.addEventListener('keydown', e => {
 
 clearBtn.on('click', () => clearNotes())
 
-numFunc(50, clearNotes)
+numFunc(51, clearNotes)
 
 for (let n = 0; n < notesArray.length; n++) {
 	new Note(notesArray[n])

@@ -262,6 +262,15 @@ hr {
   }
 }
 
+@keyframes nord-grader {
+  from {
+    background: #f15f79;
+  }
+  to {
+    background: #3b4252;
+  }
+}
+
 ::selection {
   background: #f15f79;
   color: #fff
@@ -344,6 +353,81 @@ hr {
 
 .dark #preloader {
   animation: dark-grader 1s linear infinite;
+}
+
+/*
+* =========================================================
+* Nord Mode
+* =========================================================
+*/
+
+.nord {
+  background: #4c566a;
+  color: #eceff4;
+}
+
+.nord .info {
+  filter: invert(85%);
+  color: #d8dee9 !important;
+}
+
+.nord .icon {
+  color: #d8dee9;
+}
+
+.nord .input {
+  background: #2e3440;
+  color: #eceff4;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nord .no-notes {
+  color: #d8dee9;
+}
+
+.nord .img {
+  color: #d8dee9;
+}
+
+.nord .input:hover {
+  box-shadow: none;
+}
+
+.nord .input:focus {
+  box-shadow: none;
+}
+
+.nord .input::placeholder {
+  color: #d8dee9;
+}
+
+.nord hr {
+  background: #434c5e;
+}
+
+.nord .illustration {
+  color: #d8dee9;
+}
+
+.nord .note {
+  background: #2e3440;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nord .note:hover {
+  box-shadow: none;
+}
+
+.nord .clear {
+  color: #d8dee9;
+}
+
+.nord .note_input {
+  color: #e5e9f0;
+}
+
+.nord #preloader {
+  animation: nord-grader 1s linear infinite;
 }
 
 /*

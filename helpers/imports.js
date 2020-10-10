@@ -1,5 +1,6 @@
 const body = find('body')
 const darkBtn = find('.dark-icon')
+const nordBtn = find('.nord-icon')
 const form = find('#form')
 const note = find('.note')
 const notes = find('.notes')

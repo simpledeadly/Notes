@@ -2,7 +2,11 @@ if (ls.getItem('darkTheme') == 'active') {
   body.classList.add('dark')
 }
 
-function switchTheme() {
+if (ls.getItem('nordTheme') == 'active') {
+  body.classList.add('nord')
+}
+
+function switchThemeDark() {
   body.classList.toggle('dark')
 
   if (ls.getItem('darkTheme') == 'active') {
@@ -12,6 +16,20 @@ function switchTheme() {
   }
 }
 
-darkBtn.addEventListener('click', () => switchTheme())
+function switchThemeNord() {
+  body.classList.toggle('nord')
 
-numFunc(49, switchTheme)
+  if (ls.getItem('nordTheme') == 'active') {
+    ls.removeItem("nordTheme", "active")
+  } else {
+    ls.setItem("nordTheme", "active")
+  }
+}
+
+darkBtn.addEventListener('click', () => switchThemeDark())
+
+nordBtn.addEventListener('click', () => switchThemeNord())
+
+numFunc(49, switchThemeDark)
+
+numFunc(50, switchThemeNord)
