@@ -153,11 +153,10 @@ hr {
   border-radius: 5px;
   padding: 0 24px;
   display: flex;
-  outline: none;
-  margin-right: 30px;
+  margin-right: 30px; /* Problem here */
   margin-bottom: 22px;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   background: #fff;
   transition: all 0.2s;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
@@ -172,6 +171,14 @@ hr {
 
 .note:hover {
   box-shadow: none;
+}
+
+.noHeight {
+  height: auto;
+}
+
+.noShadow {
+  box-shadow: none !important;
 }
 
 .note_input {
@@ -347,15 +354,15 @@ hr {
 
 @media screen and (min-width: 1920px) {
   .container {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 
   .navbar {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 
   .input {
-    width: 900px;
+    width: 700px;
   }
 }
 

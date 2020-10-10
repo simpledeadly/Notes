@@ -65,6 +65,16 @@ const middlewares = () => {
 			return clearNotes()
 		case 'Date.now()':
 			return input.value = new Date().toLocaleDateString()
+		case 'Help':
+			return (
+				input.value = '',
+				alert('1) clear() - Delete all notes.\n2) Date.now() - Time now.\n3) numFuncsList() - list of  num funcs.')
+			)
+		case 'numFuncsList':
+			return (
+				input.value = '',
+				alert('1) 1 - switch theme to dark.\n2) 2 - clear all notes.')
+			)
 	}
 }
 
@@ -83,7 +93,7 @@ function clearNotes() {
 	ls.clear()
   
   input.value = ''
-	notes.innerHTML = ''
+	render(notes, '')
 	
   img.removeClass(imgHide)
   clearBtn.removeClass(clearBtnDisplay)
@@ -98,6 +108,8 @@ form.addEventListener('keydown', e => {
 })
 
 clearBtn.on('click', () => clearNotes())
+
+numFunc(50, clearNotes)
 
 for (let n = 0; n < notesArray.length; n++) {
 	new Note(notesArray[n])

@@ -14,6 +14,14 @@ const removeClass = (element, className) => {
 
 const render = (entry, template) => entry.innerHTML = template
 
+const numFunc = (key, func) => {
+  window.addEventListener('keydown', e => {
+    if (e.keyCode === key) {
+      func()
+    }
+  })
+}
+
 const fadeOut = element => {
   element.style.opacity = 1
   

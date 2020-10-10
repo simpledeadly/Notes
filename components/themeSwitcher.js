@@ -2,7 +2,7 @@ if (ls.getItem('darkTheme') == 'active') {
   body.classList.add('dark')
 }
 
-darkBtn.addEventListener('click', () => {
+function switchTheme() {
   body.classList.toggle('dark')
 
   if (ls.getItem('darkTheme') == 'active') {
@@ -10,4 +10,8 @@ darkBtn.addEventListener('click', () => {
   } else {
     ls.setItem("darkTheme", "active")
   }
-})
+}
+
+darkBtn.addEventListener('click', () => switchTheme())
+
+numFunc(49, switchTheme)
